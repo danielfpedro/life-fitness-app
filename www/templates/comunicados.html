@@ -1,0 +1,51 @@
+<ion-view view-title="Comunicados">
+    <ion-content class="custom-bg">
+        <ion-refresher
+            ng-if="!loading"
+            pulling-text="Puxe para atualizar..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <my-network-alert></my-network-alert>
+
+        <div class="text-center padding" ng-if="loading">
+            <ion-spinner></ion-spinner>
+        </div>
+        <ion-list>
+            <!-- Destaques -->
+            <div ng-if="comunicados[1]">
+                <ion-item class="item-divider">
+                    Destaques
+                </ion-item>
+                <ion-item
+                    ng-repeat="comunicado in comunicados[1]"
+                    href="#/app/comunicado/1/{{$index}}">
+                    {{comunicado.title}}
+                    <div class="sub-item">
+                        <span am-time-ago="comunicado.created"></span>
+                    </div>
+                </ion-item>
+            </div>
+            <!-- Outros -->
+            <div ng-if="comunicados[0]">
+                <ion-item class="item-divider" ng-if="comunicados[1]">
+                    Outros
+                </ion-item>
+                <ion-item
+                    ng-repeat="comunicado in comunicados[0]"
+                    href="#/app/comunicado/0/{{$index}}">
+                    {{comunicado.title}}
+                    <div class="sub-item">
+                        <span am-time-ago="comunicado.created"></span>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+
+        <div class="alert-no-data" ng-if="!comunicados[0] && !comunicados[1]">
+            <span class="icon {{menuIcons.comunicados}}"></span>
+            <p>Você ainda não tem nenhum comunicado</p>
+        </div>
+
+    </ion-content>
+</ion-view>

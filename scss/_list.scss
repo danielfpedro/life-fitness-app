@@ -1,0 +1,7 @@
+.item{
+  font-size: $list-font-size!important;
+}
+.sub-item, .item-note{
+    font-size: $list-sub-item-font-size!important;
+    color: $list-sub-item-color!important;
+}

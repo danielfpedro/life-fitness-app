@@ -1,0 +1,30 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-modal">
+		<h1 class="title">Detalhes</h1>
+		<button
+			class="button button-clear btn-close-modal"
+			ng-click="closeModal()">
+			Fechar
+		</button>
+	</ion-header-bar>
+
+	<ion-content>
+            <div class="alert alert-default text-center" ng-if="ficha.obs">
+                {{ficha.obs}}
+            </div>
+		<ion-list>
+			<ion-item>
+				Instrutor
+				<div class="sub-item">{{ficha.user.name}}</div>
+			</ion-item>
+			<ion-item>
+				Objetivo
+				<div class="sub-item">{{ficha.goal}}</div>
+			</ion-item>
+			<ion-item>
+				Vencimento
+				<div class="sub-item"><span am-time-ago="ficha.end_date"></span></div	>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-modal-view>

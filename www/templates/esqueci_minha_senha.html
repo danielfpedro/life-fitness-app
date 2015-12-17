@@ -1,0 +1,23 @@
+<ion-view view-title="Esqueci a minha senha">
+
+<!--     <ion-nav-bar class="bar-app">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar> -->
+
+    <ion-content class="padding">
+        <form ng-submit="requestPasswordReset()" name="my_form">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="email" ng-model="form.email" placeholder="Email" required>
+                </label>
+            </div>
+            <button
+                ng-disabled="my_form.$pristine|| my_form.$invalid"
+                type="submit"
+                class="button button-assertive button-block">
+                Recuperar Senha
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+.alert-no-data p{
+    margin-top: 15px;
+    font-size: 16px;
+}
+.alert-no-data span.icon{
+    bottom: 15px;
+    font-size: 70px;
+}
+.alert{
+    padding: 15px 20px;
+    font-size: 14px;
+    background-color: $alert-default-bg-color;
+    color: $alert-default-font-color;
+}
+.alert-positive{
+    color: #FFF;
+    background-color: $positive;
+}
+
+// NO DATA
+.alert-no-data{
+    padding: 40px 10px;
+    text-align: center;
+    color: lighten(#000, 60%);
+}
+
+// NO NETWORK
+
+.alert-no-network{
+    padding: 3px;
+    text-align: center;
+    background-color: $navbar-color;
+    color: $navbar-text-color;
+    font-size: 13px;
+}

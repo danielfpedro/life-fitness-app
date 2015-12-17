@@ -1,0 +1,52 @@
+$mfontShadow: 1px 1px #000;
+$mFooterBg: #050505;
+.content-menu{
+    background-color: #000;
+    background-image: url($menu-lateral-bg-image);
+    background-size: auto 100%;
+    background-position: center;
+}
+.menu-wrap{
+  // width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto!important;
+  // background: red!important;
+  padding-top: 60px;
+}
+.spartan-sidemenu > .list{
+}
+.spartan-sidemenu > .list > .item{
+    background: none;
+    border: 0;
+    padding-left: 8px;
+}
+.spartan-sidemenu > .list > .item > a{
+    background: none;
+    color: $menu-font-color;
+    font-size: $menu-font-size;
+    text-shadow: $mfontShadow;
+}
+.spartan-sidemenu > .list > .item > a > .icon{
+    font-size: 24px;
+}
+.spartan-sidemenu > .list > .item.active{
+    border-left: 5px solid $navbar-color;
+    padding-left: 4px;
+}
+.spartan-sidemenu > .list > .item.active > a{
+    color: #FFF;
+}
+
+.spartan-bar-footer{
+    background-color: $mFooterBg!important;
+}
+.spartan-bar-footer > .title{
+    color: $menu-font-color;
+    font-size: 14px!important;
+    font-weight: normal!important;
+    text-shadow: $mfontShadow;
+}
+.spartan-bar-footer > .buttons > a:before{
+    color: $menu-font-color;
+    font-size: 24px!important;
+}

@@ -1,0 +1,20 @@
+<ion-view view-title="Caixa de Sugestão">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-paperplane" ng-click="send(sugestao)" ng-disabled="!sugestao.text">
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="custom-bg">
+        <my-network-alert></my-network-alert>
+        <form>
+            <div class="list">
+                <label class="item item-input">
+                    <textarea
+                        placeholder="Digite aqui..."
+                        class="sugestao"
+                        ng-model="sugestao.text"
+                        required></textarea>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

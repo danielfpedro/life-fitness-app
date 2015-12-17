@@ -1,0 +1,56 @@
+<ion-view view-title="Minha Ficha">
+    <ion-nav-buttons side="right">
+        <!-- <button
+            ng-if="ficha"
+            class="button button-icon ion-ios-close-empty"
+            ng-click="clearCheckboxes()">
+        </button> -->
+        <button
+            ng-if="ficha"
+            class="button button-icon icon ion-ios-more"
+            ng-click="openModal()">
+        </button>
+    </ion-nav-buttons>
+    <div
+        ng-if="ficha"
+        class="tabs tabs-top tabs-striped">
+        <a
+            ng-class="{'active' : currentTab == $index}"
+            class="tab-item"
+            ng-repeat="(key, exercise) in ficha.exercises"
+            ng-click="changeTab($index)">
+            {{exercisesColumns[key]}}
+        </a>
+    </div>
+    <ion-content class="custom-bg" ng-class="{'has-tabs-top' : ficha}">
+        <ion-refresher
+            ng-if="!loading"
+            pulling-text="Puxe para atualizar..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <my-network-alert></my-network-alert>
+
+        <div class="text-center padding" ng-if="loading">
+            <ion-spinner></ion-spinner>
+        </div>
+
+        <div ng-if="ficha">
+        	<ion-list class="list-no-border-top">
+                <ion-item
+                    class="item-checkbox"
+                    ng-class="{first: $first}"
+                    ng-repeat="exercise in ficha.exercises[currentTab]">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="exercise.checked">
+                    </label>
+                    {{exercise.name}}
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="alert-no-data" ng-if="!ficha">
+            <span class="icon {{menuIcons.ficha}}"></span>
+            <p>Você não tem nenhuma ficha válida, um instrutor pode cuidar disso para você</p>
+        </div>
+    </ion-content>
+</ion-view>

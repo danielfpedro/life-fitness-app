@@ -1,0 +1,15 @@
+// TABS
+.tabs{
+	background: none!important;
+	background-color: $navbar-color!important;
+	// border-bottom-color: darken($main-color, 20%)!important;
+	border-bottom: 0!important;
+	border: 0!important;
+}
+.tabs > a{
+	color: rgba($navbar-text-color, 0.4)!important;
+}
+.tab-item.active, .tab-item.activated{
+	border-bottom-color: $navbar-text-color!important;
+	color: $navbar-text-color!important;
+}

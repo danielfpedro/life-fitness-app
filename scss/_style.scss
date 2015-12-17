@@ -1,0 +1,80 @@
+/*APP*/
+.custom-bg{
+    background-color: $app-bg;
+}
+/*SUMIR COM BORDA DA NAVBAR*/
+.bar{
+    background-image: none;
+}
+/*INPUTS*/
+input, textarea{
+    font-size: $input-font-size!important;
+}
+textarea.sugestao{
+    padding: 10px 5px;
+    min-height: 200px;
+    resize: none;
+}
+.btn-close-modal{
+    color: $btn-close-modal-text-color!important;
+}
+/*Institucional*/
+.institucional-container{
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;
+}
+.institucional-header-container{
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+.institucional-header{
+    font-size: 15px!important;
+    line-height: 25px;
+    color: #FFF;
+    text-align: right;
+    padding: 20px 20px 0 20px;
+}
+.institucional-header > div{
+    padding-bottom: 10px;
+}
+.institucional-social-bar, .institucional-header{
+    background-color: rgba(0, 0, 0, .85);
+}
+.institucional-social-bar .button-clear:before{
+    color: #FFF!important;
+}
+.institucional-social-bar .button-clear:before{
+    /*font-size: 28px!important;*/
+}
+.institucional-header .icon{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.btn-institucional-social{
+    color: $navbar-color!important;
+    background-color: red!important;
+    border: 1px solid rgba(#000, .1)!important;
+}
+.institucional-image{
+    @include flex(1);
+    background-image: url(../img/cover_institucional.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center;
+}
+.institucional-container-social{
+    margin-right: -8px;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.btn-social-facebook{
+    /*background-color: $facebook!important;*/
+    background-color: #FFF!important;
+}
+.btn-social-twitter{
+    /*background-color: $twitter!important;*/
+    background-color: #FFF!important;
+}

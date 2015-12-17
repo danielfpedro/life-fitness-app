@@ -1,0 +1,10 @@
+.label{
+    padding: $label-padding;
+    margin-right: $label-margin-right;
+    border-radius: $label-border-radius;
+    font-size: $label-font-size;
+}
+.label-default{
+    background-color: $label-bg-color;
+    color: $label-font-color;
+}

@@ -1,0 +1,40 @@
+<ion-view view-title="{{dadosGerais.name}}">
+    <ion-content class="custom-bg">
+        <div class="fill-content-height">
+            <div class="institucional-container">
+                <div class="institucional-header">
+                    <div>
+                        <span class="icon ion-android-time"></span>{{dadosGerais.funcionamento}}
+                    </div>
+                    <div>
+                        <span class="icon ion-ios-location"></span>{{dadosGerais.endereco}}
+                    </div>
+                    <div>
+                        <div ng-repeat="contato in dadosGerais.contatos">
+                            <span class="icon ion-{{contato.icon}}"></span>{{contato.name}}
+                        </div>
+                    </div>
+                    <div class="institucional-container-social" ng-if="dadosGerais.redesSociais">
+                        <span ng-repeat="redeSocial in dadosGerais.redesSociais">
+                            <button
+                                type="button"
+                                ng-click="goExternal(redeSocial.url)"
+                                class="button button-clear icon btn-institucional-social ion-{{redeSocial.icon}} button-small btn-social-{{redeSocial.name}}">
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="institucional-image">
+                </div>
+            </div>
+        </div>
+<!--         <div class="padding text-center" ng-if="dadosGerais.redesSociais">
+            <span ng-repeat="redeSocial in dadosGerais.redesSociais">
+                <a
+                    class="button button-icon icon ion-{{redeSocial.icon}}"
+                    ng-href="{{redeSocial.url}}">
+                </a>
+            </span>
+        </div> -->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,52 @@
+<ion-view view-title="{{dadosGerais.name}}">
+
+    <ion-nav-buttons side="right">
+        <!-- <button
+            ng-if="ficha"
+            class="button button-icon ion-ios-close-empty"
+            ng-click="clearCheckboxes()">
+        </button> -->
+<!--         <button
+            class="button button-icon icon ion-social-twitter"
+            ng-click="openModal()">
+        </button>
+        <button
+            class="button button-clear icon ion-social-facebook"
+            ng-click="openModal()">
+        </button> -->
+    </ion-nav-buttons>
+
+    <ion-content class="custom-bg">
+        <div class="fill-content-height">
+            <div class="institucional-container">
+                <div class="institucional-header-container">
+                    <div class="institucional-header">
+                        <div ng-repeat="item in dadosGerais.funcionamento">
+                            <span class="icon ion-android-time"></span>{{item}}
+                        </div>
+                        <div>
+                            <span class="icon ion-ios-location"></span>{{dadosGerais.endereco}}
+                        </div>
+                        <div>
+                            <div ng-repeat="contato in dadosGerais.contatos">
+                                <span class="icon ion-{{contato.icon}}"></span>{{contato.name}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row institucional-social-bar">
+                        <div class="col" style="text-align: center;" ng-repeat="redeSocial in dadosGerais.redesSociais">
+                            <button
+                                type="button"
+                                ng-click="goExternal(redeSocial.url)"
+                                class="button button-clear icon ion-{{redeSocial.icon}}">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="institucional-image">
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

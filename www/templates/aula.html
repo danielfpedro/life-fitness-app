@@ -1,0 +1,19 @@
+<ion-view view-title="{{aula.name}}">
+    <ion-content>
+      <div class="padding">
+              <p>
+                  {{aula.description}}
+              </p>
+          </div>
+          <ion-list>
+              <div ng-repeat="(key, horarios) in aula.times">
+                  <ion-item class="item-divider">
+                      {{key | weekdayHumanize}}
+                  </ion-item>
+                  <ion-item>
+                      <span ng-repeat="horario in horarios" class="label label-default">{{horario.start_hour | date : 'HH:mm'}}</span>
+                  </ion-item>
+              </div>
+          </ion-list>
+    </ion-content>
+</ion-view>

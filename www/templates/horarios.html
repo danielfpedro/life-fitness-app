@@ -1,0 +1,44 @@
+<ion-view view-title="Horários">
+    <div class="tabs tabs-top tabs-striped">
+        <a
+            ng-class="{'active' : weekdayIndex == weekday.index}"
+            class="tab-item"
+            ng-repeat="weekday in weekdays"
+            ng-click="changeTab(weekday.index)">
+            {{weekday.name | limitTo : 3}}
+        </a>
+    </div>
+    <ion-content class="custom-bg has-tabs-top">
+
+        <ion-refresher
+            ng-if="!loading"
+            pulling-text="Puxe para atualizar..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <my-network-alert></my-network-alert>
+
+        <ion-list class="list-no-border-top">
+ <span
+ ng-repeat="(key, horario)
+        in horarios[weekdayIndex] | groupBy: 'start_hour'"
+        ng-if="horarios[weekdayIndex]">
+ <ion-item class="item-divider"
+        ng-class="{first: $first}">
+ {{key | date: 'HH:mm' : 'UTC'}}
+ </ion-item>
+        <a class="item" ng-repeat="aula in horario" href="#/app/aula/{{aula.service_id}}">
+                    <!-- {{aula.service.name}}
+                    <p>Duração: {{aula.service.name}}</p> -->
+                    <item-list-aula content="aula.service"></item-list-aula>
+                </a>
+            </span>
+        </ion-list>
+
+        <div class="alert-no-data" ng-if="!horarios[weekdayIndex]">
+            <span class="icon {{menuIcons.horarios}}"></span>
+            <p>Nenhuma aula para {{weekdayIndex | getWeekdayNameByIndex}}.</p>
+        </div>
+
+    </ion-content>
+</ion-view>

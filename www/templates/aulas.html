@@ -1,0 +1,36 @@
+<ion-view view-title="Aulas">
+    <ion-content class="custom-bg">
+        <ion-refresher
+            ng-if="!loading"
+            pulling-text="Puxe para atualizar..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div class="text-center padding" ng-if="loading">
+            <ion-spinner></ion-spinner>
+        </div>
+
+        <my-network-alert></my-network-alert>
+
+        <ion-list>
+<!--             <ion-item ng-repeat="aula in aulas | orderBy : 'name'" ng-click="openModal(aula)">
+                {{aula.name}}
+                <p>Duração: {{aula.duration}} Minutos</p>
+                <p>Gasto calórico médio: {{aula.gasto_calorico}}Kcal</p>
+            </ion-item> -->
+            <a
+                class="item"
+                ng-repeat="aula in aulas | orderBy : 'name'"
+                href="#/app/aula/{{aula.id}}">
+
+                <item-list-aula content="aula"></item-list-aula>
+
+            </a>
+        </ion-list>
+
+        <div class="alert-no-data" ng-if="!aulas">
+            <span class="icon {{menuIcons.aulas}}"></span>
+            <p>Nenhuma aula para mostrar</p>
+        </div>
+    </ion-content>
+</ion-view>

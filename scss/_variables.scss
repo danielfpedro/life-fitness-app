@@ -1,0 +1,93 @@
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+// TEMAS
+// texto claro
+$vermelho: #F44336;
+// texto claro
+$rosa: #E91E63;
+// texto claro
+$purpura: #9C27B0;
+// texto claro
+$purpura-escuro: #673AB7;
+// texto claro
+$indigo: #3F51B5;
+// texto claro
+$azul: #2196F3;
+// texto escuro
+$azul-light: #03A9F4;
+// texto escuro
+$ciano: #00BCD4;
+// texto claro
+$verde-agua: #009688;
+// texto escuro
+$verde: #4CAF50;
+// texto escuro
+$verde-claro: #8BC34A;
+// texto escuro
+$lima: #CDDC39;
+// texto escuro
+$amarelo: #FFEB3B;
+// texto escuro
+$ambar: #FFC107;
+// texto escuro
+$laranja: #FF9800;
+// texto claro
+$laranja-escuro: #FF5722;
+// texto escuro
+$cinza: #9E9E9E;
+// texto claro
+$cinza-azulado: #607D8B;
+// texto claro
+$preto: #000;
+// texto escuro
+$branco: #FFF;
+
+$facebook: #3b5998;
+$twitter: #4099FF;
+
+// SOBRESCREVENDO IONIC
+$font-family-sans-serif:          "Roboto", "Segoe UI", sans-serif !default;
+$font-family-light-sans-serif:    "HelveticaNeue-Light", "Roboto-Light", "Segoe UI-Light", sans-serif-light !default;
+
+// BASE
+$app-bg: darken(#FFF, 3%) !default;
+$input-font-size: 16px !default;
+
+// TEXTO
+$font-size-p: 15px !default;
+$font-size-small: $font-size-p - 2 !default;
+
+$text-color-secondary: rgba(#000, .5)!default;
+$text-color-light: #FFF;
+$text-color-half: lighten(#000, 50%);
+$text-color-dark: lighten(#000, 18%);
+
+// LISTS
+$list-font-size: 16px;
+$list-sub-item-font-size: $list-font-size - 2;
+$list-sub-item-color: $text-color-secondary;
+
+// LABELS
+$label-font-size: 13px;
+$label-bg-color: darken(#FFF, 8%);
+$label-border-radius: 4px;
+$label-margin-right: 6px;
+$label-font-color: lighten(#000, 35%);
+$label-padding: 4px 8px;
+
+// ALERTS
+$alert-default-bg-color: $label-bg-color;
+$alert-default-font-color: $label-font-color;
+
+// MENU LATERAL
+$menu-lateral-bg-image: '../img/menu_bg.jpg';
+$menu-font-color: #DDD;
+$menu-font-size: 17px;

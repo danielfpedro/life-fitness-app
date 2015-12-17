@@ -1,0 +1,61 @@
+.login-container{
+    background-color: $login-bg-color;
+    display: flex;
+    flex-direction: column;
+
+}
+.login-logo{
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+}
+.login-logo-img{
+    width: $login-logo-width!important;
+    height: $login-logo-height!important;
+    padding: $login-logo-padding!important;
+}
+.login-form{
+  width: 100%;
+  // background-color: green;
+  display: flex;
+  flex: 2;
+  align-items: center;
+}
+.login-form > form > .list{
+    background: none;
+}
+.login-form > form > .list > .item{
+    background: none;
+    border: 0;
+    border-bottom: 1px solid $login-text-color;
+}
+.login-form > form > .list > .item > input{
+    color: $login-text-color!important;
+}
+.login-form > form > .list > .item > input::-webkit-input-placeholder{
+    color: rgba($login-text-color, .6);
+}
+
+.login-footer{
+    // background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+}
+.container-esqueceu-senha{
+    padding: 30px 10px;
+}
+.button-logar{
+    background-color: $login-button-color!important;
+    border: 0!important;
+		color: $login-button-text-color!important;
+}
+
+.link-login{
+    text-decoration: none;
+    color: $login-text-color;
+}
