@@ -16,12 +16,12 @@ $mFooterBg: #050505;
 .spartan-sidemenu > .list{
 }
 .spartan-sidemenu > .list > .item{
-    background: none;
+    background: none!important;
     border: 0;
     padding-left: 8px;
 }
 .spartan-sidemenu > .list > .item > a{
-    background: none;
+    background: none!important;
     color: $menu-font-color;
     font-size: $menu-font-size;
     text-shadow: $mfontShadow;

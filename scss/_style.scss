@@ -78,3 +78,32 @@ textarea.sugestao{
     /*background-color: $twitter!important;*/
     background-color: #FFF!important;
 }
+
+/*Institucional RBNB*/
+.institucional-rbnb-container{
+    background-image: url(../img/cover_institucional.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center;
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;   
+}
+.institucional-rbnb-blank-header{
+    @include flex(1);
+}
+.institucional-rbnb-body-container{
+    padding: 20px;
+    color: #FFF;
+    font-size: 15px!important;
+    line-height: 25px;
+}
+.institucional-rbnb-footer .button-clear:before{
+    font-size: 18px;
+    margin-right: 20px;
+}
+.institucional-rbnb-body > h1{
+    color: #FFF;   
+    font-size: 46px;
+    margin-bottom: 40px;
+}

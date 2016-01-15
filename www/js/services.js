@@ -5,8 +5,8 @@ angular.module('starter.services', [])
         institucional: {
             name: 'Life Fitness',
             funcionamento: [
-                'Segunda à Sexta de 06:30 às 12:00, 14:00 às 22:00',
-                'Sábado de 08:00 às 12:00'
+                '<small>Segunda à Sexta</small><br> 06:30 às 12:00 e 14:00 às 22:00',
+                '<small>Sábado</small><br>08:00 à 12:00',
             ],
             endereco: 'Av. Nilton Penna Botelho n° 42, São Jorge - Pinheral / RJ',
             contatos: [

@@ -1,33 +1,6 @@
-<ion-view view-title="Academia">
+<ion-view view-title="{{dadosGerais.name}}">
 
     <ion-content class="custom-bg">
-        <div style="height: 120px; background-image: url(img/logo.png); background-size: auto 70%; background-position: center center; background-repeat: no-repeat;">
-        </div>
-        <ion-list class="text-center">
-            <ion-item class="item-divider">
-                <span class="icon ion-android-time" style="margin-right: 10px;"></span>Horário de funcionamento
-            </ion-item>
-            <ion-item class="item-text-wrap" ng-repeat="item in dadosGerais.funcionamento" ng-bind-html="item">
-            </ion-item>
-            <ion-item class="item-divider">
-                <span class="icon ion-android-time" style="margin-right: 10px;"></span>Localização
-            </ion-item>
-            <ion-item class="item-text-wrap">
-                {{dadosGerais.endereco}}
-            </ion-item>
-        </ion-list>
-        <div class="text-center padding" style="margin-top: 30px;">
-            <button class="button button-balanced button-outline button-block">
-                <span class="icon ion-ios-telephone" style="margin-right: 10px;"></span> Ligar
-            </button>
-            <br>
-            <button class="button button-positive button-outline button-block">
-                <span class="icon ion-social-facebook" style="margin-right: 10px;"></span> Facebook
-            </button>
-            <button class="button button-calm button-outline button-block">
-                <span class="icon ion-social-twitter" style="margin-right: 10px;"></span> Twitter
-            </button>
-        </div>
 <!--         <div style="text-align: center; background-color: #e74c3c; padding: 40px 20px; ">
             <div
                 style="width: 100px; height: 100px; background-color: #FFF; background-image: url(img/logo.png); background-size: 85% auto; background-repeat: no-repeat; background-position: center; center; margin-left: 30%;">
@@ -49,7 +22,7 @@
                 </div>
             </div>
         </div> -->
-<!--         <div class="fill-content-height">
+        <div class="fill-content-height">
             <div class="" style=" background-size: cover;display: flex; flex-direction: column; height: 100%; color: #FFF; background-color: #e74c3c">
                 <div style="display: flex; align-items: center; flex: 1; text-align: center;justify-content: center;">
                 </div>
@@ -69,6 +42,6 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </ion-content>
 </ion-view>
