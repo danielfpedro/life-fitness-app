@@ -1,19 +1,23 @@
 <ion-view view-title="Academia">
 
     <ion-content class="custom-bg">
-        <div style="height: 120px; background-image: url(img/logo.png); background-size: auto 70%; background-position: center center; background-repeat: no-repeat;">
+        <div class="institucional-header">
         </div>
         <ion-list class="text-center">
             <ion-item class="item-divider">
-                <span class="icon ion-android-time" style="margin-right: 10px;"></span>Horário de funcionamento
-            </ion-item>
-            <ion-item class="item-text-wrap" ng-repeat="item in dadosGerais.funcionamento" ng-bind-html="item">
-            </ion-item>
-            <ion-item class="item-divider">
-                <span class="icon ion-android-time" style="margin-right: 10px;"></span>Localização
+                <span class="icon ion-ios-clock institucional-divider-icon"></span>Horário de funcionamento
             </ion-item>
             <ion-item class="item-text-wrap">
-                {{dadosGerais.endereco}}
+                <small>Segunda à Sexta</small><br> 06:30 às 12:00 e 14:00 às 22:00
+            </ion-item>
+            <ion-item class="item-text-wrap">
+                <small>Sábado</small><br>08:00 à 12:00
+            </ion-item>
+            <ion-item class="item-divider">
+                <span class="icon ion-ios-location institucional-divider-icon"></span>Endereço
+            </ion-item>
+            <ion-item class="item-text-wrap">
+                Av. Nilton Penna Botelho n° 42, São Jorge - Pinheral / RJ
             </ion-item>
         </ion-list>
         <div class="text-center padding" style="margin-top: 30px;">
@@ -21,54 +25,14 @@
                 <span class="icon ion-ios-telephone" style="margin-right: 10px;"></span> Ligar
             </button>
             <br>
-            <button class="button button-positive button-outline button-block">
+            <button
+                class="button button-positive button-outline button-block"
+                ng-click="goExternal('https://www.facebook.com/ACADEMIA-LIFE-FITNESS-254466674565550')">
                 <span class="icon ion-social-facebook" style="margin-right: 10px;"></span> Facebook
             </button>
             <button class="button button-calm button-outline button-block">
                 <span class="icon ion-social-twitter" style="margin-right: 10px;"></span> Twitter
             </button>
         </div>
-<!--         <div style="text-align: center; background-color: #e74c3c; padding: 40px 20px; ">
-            <div
-                style="width: 100px; height: 100px; background-color: #FFF; background-image: url(img/logo.png); background-size: 85% auto; background-repeat: no-repeat; background-position: center; center; margin-left: 30%;">
-            </div>
-        </div> -->
-<!--         <div class="fill-content-height">
-            <div style="display: flex; flex-direction: column; height: 100%;">
-                <div style="flex: 1;background-image: url(img/tey.jpg); background-size: cover;">
-                    
-                </div>
-                <div style="justify-content: center; background-color: red;">
-                    <div class="item item-text-wrap">
-                        <span class="icon ion-ios-location" style=""></span> {{dadosGerais.endereco}}
-                    </div>
-                    <ion-list>
-                    <div class="item item-text-wrap" ng-repeat="item in dadosGerais.funcionamento">
-                        <span class="icon ion-android-time" style=""></span> {{item}}
-                    </div>
-                </div>
-            </div>
-        </div> -->
-<!--         <div class="fill-content-height">
-            <div class="" style=" background-size: cover;display: flex; flex-direction: column; height: 100%; color: #FFF; background-color: #e74c3c">
-                <div style="display: flex; align-items: center; flex: 1; text-align: center;justify-content: center;">
-                </div>
-                <div style="display: flex; align-items: center; flex: 1; text-align: center; padding: 0 20px; font-size: 16px;">
-                    <div>
-                        <div ng-repeat="item in dadosGerais.funcionamento" style="margin-bottom: 15px;">
-                            <span class="icon ion-android-time" style="margin-right: 10px;"></span>{{item}}
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <span class="icon ion-ios-location" style="margin-right: 10px;"></span>{{dadosGerais.endereco}}
-                        </div>
-                        <div style="">
-                            <div ng-repeat="contato in dadosGerais.contatos">
-                                <span class="icon ion-{{contato.icon}}" style="margin-right: 10px;"></span>{{contato.name}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </ion-content>
 </ion-view>

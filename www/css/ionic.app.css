@@ -10,7 +10,7 @@
 
 .tabs {
   background: none !important;
-  background-color: #e74c3c !important;
+  background-color: #DB3438 !important;
   border-bottom: 0 !important;
   border: 0 !important; }
 
@@ -22,7 +22,7 @@
   color: #FFF !important; }
 
 .bar-app {
-  background-color: #e74c3c !important;
+  background-color: #DB3438 !important;
   color: #FFF !important; }
 
 .bar-app > .title, .button-open-menu {
@@ -60,7 +60,7 @@
 .alert-no-network {
   padding: 3px;
   text-align: center;
-  background-color: #e74c3c;
+  background-color: #DB3438;
   color: #FFF;
   font-size: 13px; }
 
@@ -119,7 +119,7 @@ p {
   font-size: 24px; }
 
 .spartan-sidemenu > .list > .item.active {
-  border-left: 5px solid #e74c3c;
+  border-left: 5px solid #DB3438;
   padding-left: 4px; }
 
 .spartan-sidemenu > .list > .item.active > a {
@@ -167,13 +167,13 @@ p {
 .login-form > form > .list > .item {
   background: none;
   border: 0;
-  border-bottom: 1px solid #e74c3c; }
+  border-bottom: 1px solid #DB3438; }
 
 .login-form > form > .list > .item > input {
-  color: #e74c3c !important; }
+  color: #DB3438 !important; }
 
 .login-form > form > .list > .item > input::-webkit-input-placeholder {
-  color: rgba(231, 76, 60, 0.6); }
+  color: rgba(219, 52, 56, 0.6); }
 
 .login-footer {
   display: flex;
@@ -185,13 +185,13 @@ p {
   padding: 30px 10px; }
 
 .button-logar {
-  background-color: #e74c3c !important;
+  background-color: #DB3438 !important;
   border: 0 !important;
   color: #FFF !important; }
 
 .link-login {
   text-decoration: none;
-  color: #e74c3c; }
+  color: #DB3438; }
 
 /*APP*/
 .custom-bg {
@@ -211,123 +211,18 @@ textarea.sugestao {
   resize: none; }
 
 .btn-close-modal {
-  color: #e74c3c !important; }
+  color: #DB3438 !important; }
 
 /*Institucional*/
-.institucional-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%; }
-
-.institucional-header-container {
-  position: absolute;
-  top: 0;
-  width: 100%; }
-
 .institucional-header {
-  font-size: 15px !important;
-  line-height: 25px;
-  color: #FFF;
-  text-align: right;
-  padding: 20px 20px 0 20px; }
+  height: 140px;
+  background-image: url(../img/logo.png);
+  background-size: auto 60%;
+  background-position: center center;
+  background-repeat: no-repeat; }
 
-.institucional-header > div {
-  padding-bottom: 10px; }
-
-.institucional-social-bar, .institucional-header {
-  background-color: rgba(0, 0, 0, 0.85); }
-
-.institucional-social-bar .button-clear:before {
-  color: #FFF !important; }
-
-.institucional-social-bar .button-clear:before {
-  /*font-size: 28px!important;*/ }
-
-.institucional-header .icon {
-  font-size: 18px;
+.institucional-divider-icon {
   margin-right: 10px; }
-
-.btn-institucional-social {
-  color: #e74c3c !important;
-  background-color: red !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important; }
-
-.institucional-image {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background-image: url(../img/cover_institucional.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: top center; }
-
-.institucional-container-social {
-  margin-right: -8px;
-  text-align: right;
-  padding-top: 20px;
-  padding-bottom: 10px; }
-
-.btn-social-facebook {
-  /*background-color: $facebook!important;*/
-  background-color: #FFF !important; }
-
-.btn-social-twitter {
-  /*background-color: $twitter!important;*/
-  background-color: #FFF !important; }
-
-/*Institucional RBNB*/
-.institucional-rbnb-container {
-  background-image: url(../img/cover_institucional.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: top center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%; }
-
-.institucional-rbnb-blank-header {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-
-.institucional-rbnb-body-container {
-  padding: 20px;
-  color: #FFF;
-  font-size: 15px !important;
-  line-height: 25px; }
-
-.institucional-rbnb-footer .button-clear:before {
-  font-size: 18px;
-  margin-right: 20px; }
-
-.institucional-rbnb-body > h1 {
-  color: #FFF;
-  font-size: 46px;
-  margin-bottom: 40px; }
 
 /*!
   Ionicons, v2.0.1
@@ -8116,8 +8011,8 @@ input[type="checkbox"][readonly] {
     border-color: #ddd; }
   .checkbox input:checked:before,
   .checkbox input:checked + .checkbox-icon:before {
-    background: #e74c3c;
-    border-color: #e74c3c; }
+    background: #DB3438;
+    border-color: #DB3438; }
 
 .checkbox-light input:before,
 .checkbox-light .checkbox-icon:before {

@@ -178,11 +178,6 @@ angular.module('starter', [
                 templateUrl: 'templates/institucional.html',
                 controller: 'InstitucionalController'
             }
-        },
-        resolve: {
-            dadosGerais: function(DadosGerais){
-                return DadosGerais.getInstitucional();
-            }
         }
     })
 

@@ -2,38 +2,7 @@ angular.module('starter.services', [])
 
 .factory('DadosGerais', function($q){
     var data = {
-        institucional: {
-            name: 'Life Fitness',
-            funcionamento: [
-                '<small>Segunda à Sexta</small><br> 06:30 às 12:00 e 14:00 às 22:00',
-                '<small>Sábado</small><br>08:00 à 12:00',
-            ],
-            endereco: 'Av. Nilton Penna Botelho n° 42, São Jorge - Pinheral / RJ',
-            contatos: [
-                // {
-                //     icon: 'iphone',
-                //     name: '(24) 93123189372',
-                // },
-                // {
-                //     icon: 'ios-email',
-                //     name: 'atendimento@spartan.com.br'
-                // }
-            ],
-            redesSociais: [
-                {
-                    icon: 'social-facebook',
-                    name: 'facebook',
-                    url: 'https://www.facebook.com/ACADEMIA-LIFE-FITNESS-254466674565550'
-                }
-            ]
-        }
-    };
-    return {
-        getInstitucional: function() {
-            var defer = $q.defer();
-            defer.resolve(data.institucional);
-            return defer.promise;
-        }
+        name: 'Life Fitness'
     };
 })
 
@@ -594,24 +563,8 @@ angular.module('starter.services', [])
                     clearcache: 'yes',
                     toolbar: 'no'
                 };
-                $ionicLoading.show({template: 'Abrindo, aguarde...'});
-                $cordovaInAppBrowser.open(url, '_blank', options)
-                    .then(function(event) {
-                    // success
-                    })
-                    .catch(function(event) {
-                        $ionicLoading.hide();
-                    });
-
-                $rootScope.$on('$cordovaInAppBrowser:loaderror', function(e, event){
-                    $ionicLoading.hide();
-                });
-
-                $rootScope.$on('$cordovaInAppBrowser:exit', function(e, event){
-                    $ionicLoading.hide();
-                });                    
+                $cordovaInAppBrowser.open(url, '_system', options);
             });
-            
             return false;
         },
         goRoot: function(url, params){

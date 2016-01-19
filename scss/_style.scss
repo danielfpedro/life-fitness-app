@@ -19,91 +19,13 @@ textarea.sugestao{
     color: $btn-close-modal-text-color!important;
 }
 /*Institucional*/
-.institucional-container{
-    @include flexbox();
-    @include flex-direction(column);
-    height: 100%;
-}
-.institucional-header-container{
-    position: absolute;
-    top:0;
-    width: 100%;
-}
 .institucional-header{
-    font-size: 15px!important;
-    line-height: 25px;
-    color: #FFF;
-    text-align: right;
-    padding: 20px 20px 0 20px;
+    height: $institucional-header-height;
+    background-image: url(../img/logo.png);
+    background-size: $institucional-header-bg-size;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-.institucional-header > div{
-    padding-bottom: 10px;
-}
-.institucional-social-bar, .institucional-header{
-    background-color: rgba(0, 0, 0, .85);
-}
-.institucional-social-bar .button-clear:before{
-    color: #FFF!important;
-}
-.institucional-social-bar .button-clear:before{
-    /*font-size: 28px!important;*/
-}
-.institucional-header .icon{
-    font-size: 18px;
+.institucional-divider-icon{
     margin-right: 10px;
-}
-.btn-institucional-social{
-    color: $navbar-color!important;
-    background-color: red!important;
-    border: 1px solid rgba(#000, .1)!important;
-}
-.institucional-image{
-    @include flex(1);
-    background-image: url(../img/cover_institucional.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: top center;
-}
-.institucional-container-social{
-    margin-right: -8px;
-    text-align: right;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-.btn-social-facebook{
-    /*background-color: $facebook!important;*/
-    background-color: #FFF!important;
-}
-.btn-social-twitter{
-    /*background-color: $twitter!important;*/
-    background-color: #FFF!important;
-}
-
-/*Institucional RBNB*/
-.institucional-rbnb-container{
-    background-image: url(../img/cover_institucional.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: top center;
-    @include flexbox();
-    @include flex-direction(column);
-    height: 100%;   
-}
-.institucional-rbnb-blank-header{
-    @include flex(1);
-}
-.institucional-rbnb-body-container{
-    padding: 20px;
-    color: #FFF;
-    font-size: 15px!important;
-    line-height: 25px;
-}
-.institucional-rbnb-footer .button-clear:before{
-    font-size: 18px;
-    margin-right: 20px;
-}
-.institucional-rbnb-body > h1{
-    color: #FFF;   
-    font-size: 46px;
-    margin-bottom: 40px;
 }
