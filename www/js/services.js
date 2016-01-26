@@ -6,16 +6,40 @@ angular.module('starter.services', [])
     };
 })
 
+.factory('GymConfig', function(
+    $cordovaToast,
+    $http,
+    $q
+){
+    return {
+        institucional: function(){
+            var defer = $q.defer();
+            $http
+                .get('config/app.json')
+                .then(function(result){
+                    console.log('Resultado da leitura do arquivo de configuração:');
+                    console.log(result.data.institucional);
+                    defer.resolve(result.data.institucional);
+                }, function(err){  
+                    console.log(err);
+                    $cordovaToast.show('Ocorreu um erro ao ler o arquivo de configuração.', 'long', 'bottom');
+                    defer.reject();
+                });
+            return defer.promise;
+        }
+    }
+})
+
 .factory('Notification', function(
-    $q,
+    $cordovaDevice,
+    $cordovaDialogs,
+    $cordovaToast,
     $http,
     $ionicPlatform,
+    $q,
     $rootScope,
-    $cordovaDevice,
-    $cordovaToast,
-    $cordovaDialogs,
-    CustomState,
     CONFIG,
+    CustomState,
     store
 ){
     return {

@@ -18,14 +18,25 @@ textarea.sugestao{
 .btn-close-modal{
     color: $btn-close-modal-text-color!important;
 }
-/*Institucional*/
+
+
+/**
+ * Institucional
+ */
 .institucional-header{
     height: $institucional-header-height;
     background-image: url(../img/logo.png);
     background-size: $institucional-header-bg-size;
+    background-color: $institucional-header-color;
     background-position: center center;
     background-repeat: no-repeat;
 }
 .institucional-divider-icon{
     margin-right: 10px;
+}
+.institucional-btn-icon{
+    margin-right: 10px;   
+}
+.institucional-action-buttons-container{
+    margin-top: 30px;
 }

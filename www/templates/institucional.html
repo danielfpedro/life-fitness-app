@@ -1,38 +1,53 @@
 <ion-view view-title="Academia">
-
     <ion-content class="custom-bg">
-        <div class="institucional-header">
-        </div>
+        <!-- Header with the logo on background -->
+        <div class="institucional-header"></div>
+        <!-- List with horario de funcionamento and address -->
         <ion-list class="text-center">
             <ion-item class="item-divider">
                 <span class="icon ion-ios-clock institucional-divider-icon"></span>Horário de funcionamento
             </ion-item>
-            <ion-item class="item-text-wrap">
-                <small>Segunda à Sexta</small><br> 06:30 às 12:00 e 14:00 às 22:00
-            </ion-item>
-            <ion-item class="item-text-wrap">
-                <small>Sábado</small><br>08:00 à 12:00
+            <ion-item class="item-text-wrap" ng-repeat="horario in data.horariosFuncionamento">
+                <small>{{horario.dia}}</small><br> {{horario.hora}}
             </ion-item>
             <ion-item class="item-divider">
                 <span class="icon ion-ios-location institucional-divider-icon"></span>Endereço
             </ion-item>
             <ion-item class="item-text-wrap">
-                Av. Nilton Penna Botelho n° 42, São Jorge - Pinheral / RJ
+                {{data.endereco}}
             </ion-item>
         </ion-list>
-        <div class="text-center padding" style="margin-top: 30px;">
-            <button class="button button-balanced button-outline button-block">
-                <span class="icon ion-ios-telephone" style="margin-right: 10px;"></span> Ligar
-            </button>
-            <br>
-            <button
-                class="button button-positive button-outline button-block"
-                ng-click="goExternal('https://www.facebook.com/ACADEMIA-LIFE-FITNESS-254466674565550')">
-                <span class="icon ion-social-facebook" style="margin-right: 10px;"></span> Facebook
-            </button>
-            <button class="button button-calm button-outline button-block">
-                <span class="icon ion-social-twitter" style="margin-right: 10px;"></span> Twitter
-            </button>
+        <!-- Section with the action buttons -->
+        <div class="text-center padding institucional-action-buttons-container" ng-if="data.buttons">
+            <!-- Display Call button if is not null -->
+            <div ng-if="data.buttons.call">
+                <a
+                    href="tel:{{data.buttons.call.tel}}"
+                    class="button button-balanced button-outline button-block">
+                    <span
+                        class="icon ion-ios-telephone institucional-btn-icon"></span> Ligar
+                </a>
+                <br>
+            </div>
+            <!-- Display Email button if is not null -->
+            <div ng-if="data.buttons.email">
+                <a
+                    href="mailto:{{data.buttons.email.address}}"
+                    class="button button-assertive button-outline button-block">
+                    <span
+                        class="icon ion-android-mail institucional-btn-icon"></span> Email
+                </a>
+                <br>
+            </div>
+            <!-- Display social buttons if theres at least one -->
+            <div ng-if="data.buttons.social.length > 0" ng-repeat="button in data.buttons.social">
+                <button
+                    class="button button-outline button-block button-{{button.color}}"
+                    ng-click="goExternal(button.url)">
+                    <span
+                        class="icon ion-{{button.icon}} institucional-btn-icon"></span> {{button.label}}
+                </button>                
+            </div>
         </div>
     </ion-content>
 </ion-view>

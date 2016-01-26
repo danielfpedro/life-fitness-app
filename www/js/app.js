@@ -178,6 +178,11 @@ angular.module('starter', [
                 templateUrl: 'templates/institucional.html',
                 controller: 'InstitucionalController'
             }
+        },
+        resolve: {
+            data: function(GymConfig){
+                return GymConfig.institucional();
+            }
         }
     })
 

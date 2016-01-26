@@ -1,0 +1,25 @@
+{
+    "institucional": {
+        "horariosFuncionamento": [
+            {
+                "dia": "Segunda à Sexta",
+                "hora": "06:30 às 12:00 e 14:00 às 22:00"
+            },
+            {
+                "dia": "Sabado",
+                "hora": "08:00 à 12:00"
+            }
+        ],
+        "endereco": "Av. Nilton Penna Botelho n° 42, São Jorge - Pinheral / RJ",
+        "buttons": {
+            "social": [
+                {
+                    "label": "Facebook",
+                    "icon": "social-facebook",
+                    "color": "positive",
+                    "url": "https://www.facebook.com/ACADEMIA-LIFE-FITNESS-254466674565550"
+                }
+            ]
+        }
+    }
+}

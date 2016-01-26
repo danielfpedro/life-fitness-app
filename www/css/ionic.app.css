@@ -8,6 +8,9 @@
   font-family: "Doida";
   src: url("../fonts/Doida.ttf") format("truetype"); }
 
+/**
+ * INSTITUCIONAL
+ */
 .tabs {
   background: none !important;
   background-color: #DB3438 !important;
@@ -213,16 +216,25 @@ textarea.sugestao {
 .btn-close-modal {
   color: #DB3438 !important; }
 
-/*Institucional*/
+/**
+ * Institucional
+ */
 .institucional-header {
   height: 140px;
   background-image: url(../img/logo.png);
   background-size: auto 60%;
+  background-color: #ecf0f1;
   background-position: center center;
   background-repeat: no-repeat; }
 
 .institucional-divider-icon {
   margin-right: 10px; }
+
+.institucional-btn-icon {
+  margin-right: 10px; }
+
+.institucional-action-buttons-container {
+  margin-top: 30px; }
 
 /*!
   Ionicons, v2.0.1

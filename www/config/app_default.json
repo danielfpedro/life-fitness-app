@@ -1,0 +1,31 @@
+{
+    "institucional": {
+        "horariosFuncionamento": [
+            {
+                "dia": "Segunda à Sexta",
+                "hora": "06:30 às 12:00 e 14:00 às 22:00"
+            },
+            {
+                "dia": "Sabado",
+                "hora": "08:00 à 12:00"
+            }
+        ],
+        "endereco": "Rua n° , Bairro - Cidade / UF",
+        "buttons": {
+            "call": {
+                "tel": "ddd 999999999"
+            },
+            "email": {
+                "address": "name@domain.com"
+            },
+            "social": [
+                {
+                    "label": "Facebook",
+                    "icon": "social-facebook",
+                    "color": "positive",
+                    "url": "https://www.facebook.com/example"
+                }
+            ]
+        }
+    }
+}

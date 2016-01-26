@@ -423,8 +423,11 @@ angular.module('starter.controllers', [])
 
 .controller('InstitucionalController', function(
     $scope,
-    CustomState
+    CustomState,
+    data
 ) {
+    $scope.data = data;
+
     $scope.goExternal = function(url) {
         CustomState.goExternal(url);
     };
