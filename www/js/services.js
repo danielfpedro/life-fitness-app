@@ -12,19 +12,38 @@ angular.module('starter.services', [])
     $q
 ){
     return {
+        data: function(){
+            return {
+                "institucional": {
+                    "horariosFuncionamento": [
+                        {
+                            "dia": "Segunda à Sexta",
+                            "hora": "06:30 às 12:00 e 14:00 às 22:00"
+                        },
+                        {
+                            "dia": "Sabado",
+                            "hora": "08:00 à 12:00"
+                        }
+                    ],
+                    "endereco": "Av. Nilton Penna Botelho n° 42, São Jorge - Pinheral / RJ",
+                    "buttons": {
+                        "social": [
+                            {
+                                "label": "Facebook",
+                                "icon": "social-facebook",
+                                "color": "positive",
+                                "url": "https://www.facebook.com/ACADEMIA-LIFE-FITNESS-254466674565550"
+                            }
+                        ]
+                    }
+                }
+            };
+        },
         institucional: function(){
             var defer = $q.defer();
-            $http
-                .get('config/app.json')
-                .then(function(result){
-                    console.log('Resultado da leitura do arquivo de configuração:');
-                    console.log(result.data.institucional);
-                    defer.resolve(result.data.institucional);
-                }, function(err){  
-                    console.log(err);
-                    $cordovaToast.show('Ocorreu um erro ao ler o arquivo de configuração.', 'long', 'bottom');
-                    defer.reject();
-                });
+
+            defer.resolve(this.data().institucional);
+
             return defer.promise;
         }
     }
